@@ -1,32 +1,25 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
+import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
 
-import { Footer, Navbar } from "./components";
-import { About, Contact, Home, Projects } from "./pages";
-
-const App = () => {
-  return (
-    <main className='bg-slate-300/20'>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route
-            path='/*'
-            element={
-              <>
-                <Routes>
-                  <Route path='/about' element={<About />} />
-                  <Route path='/projects' element={<Projects />} />
-                  <Route path='/contact' element={<Contact />} />
-                </Routes>
-                <Footer />
-              </>
-            }
-          />
-        </Routes>
-      </Router>
+const App = () => (
+  <>
+    <Header />
+    <main>
+      <Hero />
+      <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Contact />
     </main>
-  );
-};
+    <Footer />
+  </>
+);
 
 export default App;
