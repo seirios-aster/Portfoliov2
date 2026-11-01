@@ -168,7 +168,7 @@ export const projects = [
     name: "Gastos",
     description: "An expense and loans tracker to keep tabs on where your money goes and who owes what.",
     tags: ["Expenses", "Loans", "Tracker"],
-    link: "", // private repo; add a live URL if there is one
+    link: "https://github.com/seirios-aster/gastos",
   },
   {
     iconUrl: threads,
