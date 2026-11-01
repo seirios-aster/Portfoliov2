@@ -45,21 +45,23 @@ const Projects = () => {
                   </li>
                 ))}
               </ul>
-              <div className='mt-5 flex items-center gap-2 font-poppins'>
-                <Link
-                  to={project.link}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='font-semibold text-blue-600'
-                >
-                  View on GitHub
-                </Link>
-                <img
-                  src={arrow}
-                  alt=''
-                  className='w-4 h-4 object-contain'
-                />
-              </div>
+              {project.link && (
+                <div className='mt-5 flex items-center gap-2 font-poppins'>
+                  <Link
+                    to={project.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='font-semibold text-blue-600'
+                  >
+                    View on GitHub
+                  </Link>
+                  <img
+                    src={arrow}
+                    alt=''
+                    className='w-4 h-4 object-contain'
+                  />
+                </div>
+              )}
             </div>
           </div>
         ))}

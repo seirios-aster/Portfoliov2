@@ -10,6 +10,7 @@ import {
   css,
   csharp,
   dotnetcore,
+  estate,
   express,
   github,
   html,
@@ -154,6 +155,22 @@ export const socialLinks = [
 
 export const projects = [
   {
+    iconUrl: car,
+    theme: "btn-back-blue",
+    name: "MyWorld",
+    description: "A 3D multiplayer interactive world. It plays like a game: explore it together with other people in real time.",
+    tags: ["3D", "Multiplayer", "Interactive"],
+    link: "", // add the repo or live URL when public
+  },
+  {
+    iconUrl: estate,
+    theme: "btn-back-green",
+    name: "Gastos",
+    description: "An expense and loans tracker to keep tabs on where your money goes and who owes what.",
+    tags: ["Expenses", "Loans", "Tracker"],
+    link: "", // private repo; add a live URL if there is one
+  },
+  {
     iconUrl: threads,
     theme: "btn-back-green",
     name: "Clean Architecture in .NET Core and Angular",
@@ -171,20 +188,12 @@ export const projects = [
     link: "https://github.com/cutiegianina/pirates",
   },
   {
-    iconUrl: car,
-    theme: "btn-back-blue",
+    iconUrl: snapgram,
+    theme: "btn-back-pink",
     name: "3D Portfolio",
     description: "This site: an explorable 3D island built with React, Three.js and Tailwind CSS.",
     tags: ["React", "Three.js", "Tailwind"],
     link: "https://github.com/cutiegianina/Portfoliov2",
-  },
-  {
-    iconUrl: snapgram,
-    theme: "btn-back-pink",
-    name: "Beach-front properties for sale",
-    description: "A property listing website I built when I was still a student.",
-    tags: ["Web"],
-    link: "https://github.com/cutiegianina/samalbeachline",
   },
 ];
 
