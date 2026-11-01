@@ -37,8 +37,12 @@ import bootstrap from './bootstrap.svg';
 import azuredevops from './azure-devops.svg';
 import azure from './azure.svg';
 import docker from './docker.svg';
+import jenkins from './jenkins.svg';
+import githubactions from './github-actions.svg';
 
 export {
+    jenkins,
+    githubactions,
     css,
     express,
     git,

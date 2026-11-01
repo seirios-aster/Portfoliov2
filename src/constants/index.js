@@ -1,4 +1,5 @@
 import { ducen, vpi, flatplanet } from "../assets/images";
+import { placeholderIcon } from "./placeholderIcon";
 import {
   angular,
   arrow,
@@ -12,9 +13,11 @@ import {
   dotnetcore,
   estate,
   express,
+  githubactions,
   github,
   html,
   javascript,
+  jenkins,
   linkedin,
   mongodb,
   mssql,
@@ -44,24 +47,39 @@ export const education = {
   date: "2018 – 2022",
 };
 
-// `tiles` have an icon, `chips` are text only.
+// Every skill is an icon tile. Brand logos where we have one, otherwise a
+// monogram placeholder (see placeholderIcon).
+const ph = placeholderIcon;
+
 export const skillGroups = [
   {
     label: "Back end",
     tiles: [
       { name: "C#", icon: csharp },
       { name: ".NET Core", icon: dotnetcore },
+      { name: "Web API", icon: ph("API", "#512bd4") },
+      { name: "Entity Framework Core", icon: ph("EF", "#6d4fd6") },
       { name: "ExpressJS", icon: express },
     ],
-    chips: ["Web API", "Entity Framework Core"],
   },
   {
     label: "Architecture & Patterns",
-    chips: ["Clean Architecture", "Microservices", "CQRS", "MediatR", "Object-Oriented Design", "Design Patterns"],
+    tiles: [
+      { name: "Clean Architecture", icon: ph("CA", "#0f766e") },
+      { name: "Microservices", icon: ph("MS", "#0e7490") },
+      { name: "CQRS", icon: ph("CQ", "#1d4ed8") },
+      { name: "MediatR", icon: ph("MR", "#7c3aed") },
+      { name: "Object-Oriented Design", icon: ph("OOD", "#be185d") },
+      { name: "Design Patterns", icon: ph("DP", "#c2410c") },
+    ],
   },
   {
     label: "Messaging & Integration",
-    chips: ["Message Queues", "Service Bus", "Event-Driven Architecture"],
+    tiles: [
+      { name: "Message Queues", icon: ph("MQ", "#b45309") },
+      { name: "Service Bus", icon: ph("SB", "#0369a1") },
+      { name: "Event-Driven Architecture", icon: ph("ED", "#4d7c0f") },
+    ],
   },
   {
     label: "Front end",
@@ -73,8 +91,8 @@ export const skillGroups = [
       { name: "CSS", icon: css },
       { name: "Blazor", icon: blazor },
       { name: "React", icon: react },
+      { name: "Power Apps", icon: ph("PA", "#742774") },
     ],
-    chips: ["Power Apps"],
   },
   {
     label: "Databases",
@@ -88,9 +106,9 @@ export const skillGroups = [
     tiles: [
       { name: "Azure Functions", icon: azure },
       { name: "Azure DevOps", icon: azuredevops },
-      { name: "GitHub Actions", icon: github },
+      { name: "GitHub Actions", icon: githubactions },
+      { name: "Jenkins", icon: jenkins },
     ],
-    chips: ["Jenkins"],
   },
 ];
 

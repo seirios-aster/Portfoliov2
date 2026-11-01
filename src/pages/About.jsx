@@ -16,10 +16,10 @@ const Skills = () => (
       <div className='py-4 bg-gray-100 rounded-xl shadow-xl mb-4' key={group.label}>
         <h2 className='px-4 text-2xl'>{group.label}</h2>
         {group.tiles && (
-          <ul className={`mt-4 px-4 flex flex-wrap gap-6 md:gap-10 justify-center md:justify-start ${group.chips ? "" : "pb-6"}`}>
+          <ul className='mt-4 px-4 pb-12 flex flex-wrap gap-x-8 gap-y-14 md:gap-x-10 justify-center md:justify-start'>
             {group.tiles.map((skill) => (
               <li className='block-container w-20 h-20 flex justify-center' key={skill.name}>
-                <span className='absolute -bottom-6 z-10 text-xs whitespace-nowrap'>{skill.name}</span>
+                <span className='absolute left-1/2 top-[calc(100%+6px)] z-10 w-28 -translate-x-1/2 text-center text-xs leading-tight'>{skill.name}</span>
                 <div className='btn-back rounded-xl' />
                 <div className='btn-front rounded-xl flex justify-center items-center'>
                   <img src={skill.icon} alt={skill.name} className='w-1/2 h-1/2 object-contain' title={skill.name} />
