@@ -179,7 +179,7 @@ export const projects = [
     description: "A 3D multiplayer interactive world. It plays like a game: explore it together with other people in real time.",
     tags: ["3D", "Multiplayer", "Interactive"],
     link: "https://github.com/seirios-aster/My-World",
-    live: "", // add the live page URL
+    live: "https://seirios-aster.github.io/My-World/",
   },
   {
     iconUrl: estate,
