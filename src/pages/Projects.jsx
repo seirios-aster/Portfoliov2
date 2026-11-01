@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 import { CTA } from "../components";
 import { projects } from "../constants";
 import { arrow } from "../assets/icons";
@@ -45,21 +43,30 @@ const Projects = () => {
                   </li>
                 ))}
               </ul>
-              {project.link && (
-                <div className='mt-5 flex items-center gap-2 font-poppins'>
-                  <Link
-                    to={project.link}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='font-semibold text-blue-600'
-                  >
-                    View on GitHub
-                  </Link>
-                  <img
-                    src={arrow}
-                    alt=''
-                    className='w-4 h-4 object-contain'
-                  />
+              {(project.live || project.link) && (
+                <div className='mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 font-poppins'>
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='flex items-center gap-2 font-semibold text-blue-600'
+                    >
+                      Live demo
+                      <img src={arrow} alt='' className='w-4 h-4 object-contain' />
+                    </a>
+                  )}
+                  {project.link && (
+                    <a
+                      href={project.link}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='flex items-center gap-2 font-semibold text-blue-600'
+                    >
+                      View on GitHub
+                      <img src={arrow} alt='' className='w-4 h-4 object-contain' />
+                    </a>
+                  )}
                 </div>
               )}
             </div>
