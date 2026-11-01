@@ -167,7 +167,7 @@ export const experiences = [
 
 export const socialLinks = [
   { name: "Contact", iconUrl: contact, link: "/contact" },
-  { name: "GitHub", iconUrl: github, link: "https://github.com/cutiegianina" },
+  { name: "GitHub", iconUrl: github, link: "https://github.com/seirios-aster" },
   { name: "LinkedIn", iconUrl: linkedin, link: "https://www.linkedin.com/in/richard-puig-732601227" },
 ];
 
@@ -196,7 +196,7 @@ export const projects = [
     description:
       "A reference implementation of Clean Architecture with a .NET Core API and an Angular client, secured with JWT authentication.",
     tags: [".NET Core", "Angular", "JWT"],
-    link: "https://github.com/cutiegianina/Clean-Architecture-in-.Net-Core",
+    link: "https://github.com/seirios-aster/Clean-Architecture-in-.Net-Core",
   },
   {
     iconUrl: pricewise,
@@ -204,7 +204,7 @@ export const projects = [
     name: "API provider with ExpressJS & MongoDB",
     description: "A lightweight REST API server built with ExpressJS and MongoDB to explore the Node ecosystem.",
     tags: ["ExpressJS", "MongoDB"],
-    link: "https://github.com/cutiegianina/pirates",
+    link: "https://github.com/seirios-aster/pirates",
   },
   {
     iconUrl: snapgram,
@@ -212,7 +212,7 @@ export const projects = [
     name: "3D Portfolio",
     description: "This site: an explorable 3D island built with React, Three.js and Tailwind CSS.",
     tags: ["React", "Three.js", "Tailwind"],
-    link: "https://github.com/cutiegianina/Portfoliov2",
+    link: "https://github.com/seirios-aster/Portfoliov2",
   },
 ];
 
