@@ -1,6 +1,6 @@
 # Richard Puig – Portfolio
 
-Personal portfolio built with React, Vite and Tailwind CSS.
+A scroll-driven 3D portfolio built with React, three.js (React Three Fiber), Framer Motion, Lenis and Tailwind CSS.
 
 Live: https://portfoliov2-nu-olive.vercel.app/
 
@@ -11,9 +11,15 @@ npm install
 npm run dev
 ```
 
-## Content
+## Where things live
 
-All text (experience, skills, projects, links) lives in `src/data.js`. The CV served at `/Richard-Puig-CV.pdf` is `public/Richard-Puig-CV.pdf`.
+- `src/constants/index.js`: all content (profile, experience, skills, projects). Edit this to update the site.
+- `src/three/Scene.jsx`: the persistent 3D background. `KEYS` sets where the blob sits, how big it is and its colour for each section.
+- `src/components/`: one file per section (Hero, About, Experience, Skills, Projects, Contact) plus shared pieces.
+- `src/lib/scroll.js`: smooth-scroll helpers and the scroll/pointer state the 3D scene reads every frame.
+- `public/Richard-Puig-CV.pdf`: the CV served by the "Download CV" buttons.
+
+The 3D scene is lazy-loaded so text paints first. Visitors with `prefers-reduced-motion` get no smooth scrolling and a calmer scene, and browsers without WebGL get a CSS gradient instead.
 
 ## Contact form
 

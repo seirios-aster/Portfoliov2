@@ -1,34 +1,18 @@
-import { Link } from "react-router-dom";
+import { profile } from "../constants";
+import { scrollToId } from "../lib/scroll";
+import { ArrowUp } from "./Icons";
 
-import { socialLinks } from "../constants";
-import { name } from "../constants";
-
-const currentYear = new Date().getFullYear();
-const Footer = () => {
-  return (
-    <footer className='footer font-poppins'>
-      <hr className='border-slate-200' />
-
-      <div className='footer-container'>
-        <p>
-          © {currentYear} <strong>{name.first} {name.last}</strong>. All rights reserved.
-        </p>
-
-        <div className='flex gap-3 justify-center items-center'>
-          {socialLinks.map((link) => (
-            <Link key={link.name} to={link.link} target='_blank'>
-              <img
-                src={link.iconUrl}
-                alt={link.name}
-                className='w-6 h-6 object-contain hover:scale-150'
-                title={link.name}
-              />
-            </Link>
-          ))}
-        </div>
-      </div>
-    </footer>
-  );
-};
+const Footer = () => (
+  <footer className='relative z-10 border-t border-white/10'>
+    <div className='container-page flex flex-col items-center justify-between gap-4 py-10 text-sm text-white/50 sm:flex-row'>
+      <p>
+        © {new Date().getFullYear()} {profile.firstName} {profile.lastName}. Built with React, three.js and Framer Motion.
+      </p>
+      <button type='button' onClick={() => scrollToId("top")} className='btn-ghost !py-2 text-sm'>
+        Back to top <ArrowUp width={16} height={16} />
+      </button>
+    </div>
+  </footer>
+);
 
 export default Footer;
