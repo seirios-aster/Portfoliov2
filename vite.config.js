@@ -1,8 +1,8 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  assetsInclude: ['**/*.glb'],
-})
+  // three.js lives in the lazily loaded Scene chunk, so it never blocks first paint.
+  build: { chunkSizeWarningLimit: 1100 },
+});

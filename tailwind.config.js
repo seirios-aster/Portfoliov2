@@ -1,32 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
       colors: {
-        gray: {
-          200: "#D5DAE1"
-        },
-        black: {
-          DEFAULT: "#000",
-          500: "#1D2235"
-        },
-        blue: {
-          500: "#2b77e7"
-        }
+        ink: { DEFAULT: "#07080f", soft: "#0d0f1c" },
       },
       fontFamily: {
-        worksans: ["Work Sans", "sans-serif"],
-        poppins: ['Poppins', "sans-serif"]
+        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Space Grotesk", "Inter", "ui-sans-serif", "system-ui", "sans-serif"],
       },
-      boxShadow: {
-        card: '0px 1px 2px 0px rgba(0, 0, 0, 0.05)'
-      }
     },
   },
   plugins: [],
-}
-
+};
